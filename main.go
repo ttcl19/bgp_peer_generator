@@ -8,9 +8,9 @@ import (
 )
 
 func main() {
-	var network_id string
-	fmt.Scanln(&network_id)
-	url := fmt.Sprintf("https://www.peeringdb.com/api/net/%s", network_id)
+	var asn string
+	fmt.Scanln(&asn)
+	url := fmt.Sprintf("https://peeringdb.com/api/net?asn=%s", asn)
 	res, err := http.Get(url)
 	if err != nil {
 		log.Fatal(err)
